@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: 8fc6d56df50d452458f13c2f41cad447
+guid: 4a3fdb0e8f6ca584eb014386c518ed59
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: -2837869272439031025
-    second: Skeleton|Skeleton|Take 001|BaseLayer
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
