@@ -9,6 +9,8 @@ public class moveObjects : MonoBehaviour
     private Vector3 mOffset;
     private float mZcoord;
     public Camera secondCam;
+    private Rigidbody rb;
+
 
     private void OnMouseDown()
     {
@@ -26,5 +28,17 @@ public class moveObjects : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = GetMouseWorldPos() + mOffset;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+           
+            Rigidbody otherRb = collision.gameObject.GetComponent<Rigidbody>();
+
+            
+            otherRb.velocity = -otherRb.velocity;
+        }
     }
 }

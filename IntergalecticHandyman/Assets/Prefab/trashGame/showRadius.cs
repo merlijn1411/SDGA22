@@ -9,7 +9,8 @@ public class showRadius : MonoBehaviour
     public float radius;
     public TextMeshProUGUI E;
     public Transform player;
-    public GameObject uiElement;
+    
+    public GameObject Dot;
 
     public GameObject cam1;
     public GameObject cam2;
@@ -32,10 +33,13 @@ public class showRadius : MonoBehaviour
             E.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                uiElement.SetActive(true);
+                
                 Debug.Log("je hebt E ingedrukt");
                 cam1.SetActive(false);
                 cam2.SetActive(true);
+                Cursor.lockState = ( CursorLockMode.None);
+                Cursor.visible = true;
+                Dot.SetActive(false);
             }
         }
         if (distanceToTExt >= radius)
