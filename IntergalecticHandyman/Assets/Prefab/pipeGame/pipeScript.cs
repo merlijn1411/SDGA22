@@ -38,7 +38,7 @@ public class pipeScript : MonoBehaviour
         else
         {
             if (transform.eulerAngles.z == correctRotation[0] )
-            {
+            { 
                 inPlace = true;
                 gameManager.correctMove();
             }
