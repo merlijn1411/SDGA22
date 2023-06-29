@@ -37,9 +37,9 @@ public class showRadius : MonoBehaviour
                 Debug.Log("je hebt E ingedrukt");
                 cam1.SetActive(false);
                 cam2.SetActive(true);
-                Dot.SetActive(false);
-                Cursor.lockState = CursorLockMode.None;
+                Cursor.lockState = ( CursorLockMode.None);
                 Cursor.visible = true;
+                Dot.SetActive(false);
             }
         }
         if (distanceToTExt >= radius)
