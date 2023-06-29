@@ -14,6 +14,8 @@ public class Gamecontroller : MonoBehaviour
 
     private showRadius1 GamecameraScript;
 
+    internal bool WinPipeGame = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class Gamecontroller : MonoBehaviour
             Debug.Log("Je hebt Gewonnen");
             GamecameraScript.cam1.SetActive(true);
             GamecameraScript.cam2.SetActive(false);
+            WinPipeGame= true;
         }
     }
 

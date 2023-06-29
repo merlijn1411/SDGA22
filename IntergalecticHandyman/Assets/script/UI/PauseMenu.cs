@@ -11,7 +11,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     void Start() 
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Resume();
     }
 
@@ -20,15 +21,26 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             if (GameisPaused) 
-            { 
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 Resume();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 Pause();
             }
         }
-        
+        else
+        {
+            if (GameisPaused == false)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+        }
     }
 
     public void Resume()
@@ -36,18 +48,20 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
+    public void Option()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameisPaused = true;
+    }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameisPaused = true;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     public void LoadMenu()
@@ -57,4 +71,9 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Loading menu...");
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Quitting Game...");
+        Application.Quit();
+    }
 }
