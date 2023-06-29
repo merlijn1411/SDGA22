@@ -11,6 +11,7 @@ public class moveObjects : MonoBehaviour
     public Camera secondCam;
     private Rigidbody rb;
 
+
     private void OnMouseDown()
     {
         mZcoord = secondCam.WorldToScreenPoint(gameObject.transform.position).z;

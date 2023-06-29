@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio;
 
 
 public class HoldInteraction : MonoBehaviour
@@ -14,7 +13,6 @@ public class HoldInteraction : MonoBehaviour
     public Image progressBar;
     public float progressBarWidth = 1000; // Set the desired width of the progress bar
     public Image BackgroundProgressBar;
-    public AudioSource Audio;
 
     private bool isInRange = false;
     private bool isHoldingInteraction = false;
@@ -61,17 +59,12 @@ public class HoldInteraction : MonoBehaviour
                 isHoldingInteraction = true;
                 interactionHoldTime += Time.deltaTime;
                 BackgroundProgressBar.gameObject.SetActive(true);
-                if (!Audio.isPlaying)
-                {
-                    Audio.Play();
-                }
                 
 
                 if (interactionHoldTime >= requiredHoldTime)
                 {
                     // Interaction held for 10 seconds
                     CompleteInteraction();
-                    Audio.Stop();
                 }
             }
             
