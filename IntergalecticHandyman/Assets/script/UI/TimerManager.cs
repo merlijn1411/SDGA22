@@ -11,6 +11,8 @@ public class TimerManager : MonoBehaviour
     public int minutes = 2;
     public int seconds = 30;
     public TMP_Text GameoverScreen;
+    public GameObject ButtonTry;
+    public GameObject buttonQuit;
 
 
     private void Start()
@@ -18,6 +20,13 @@ public class TimerManager : MonoBehaviour
         StartCoroutine(StartCountdown()); 
         GameoverScreen.gameObject.SetActive(false);
         timerText.gameObject.SetActive(true);
+        ButtonTry.SetActive(false);
+        buttonQuit.SetActive(false);
+    }
+
+    private void Update()
+    {
+        
     }
 
     private IEnumerator StartCountdown()
@@ -36,6 +45,8 @@ public class TimerManager : MonoBehaviour
                     Debug.Log("Game over ");
                     GameoverScreen.gameObject.SetActive(true);
                     timerText.gameObject.SetActive(false);
+                    ButtonTry.SetActive(true);
+                    buttonQuit.SetActive(true);
                     Time.timeScale = 0f;
                     break;
                 }
