@@ -12,6 +12,8 @@ public class showRadius : MonoBehaviour
     
     public GameObject Dot;
 
+    public GameObject TaskBook;
+
     public GameObject cam1;
     public GameObject cam2;
     // Start is called before the first frame update
@@ -38,6 +40,7 @@ public class showRadius : MonoBehaviour
                 cam1.SetActive(false);
                 cam2.SetActive(true);
                 Dot.SetActive(false);
+                TaskBook.SetActive(false);
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }

@@ -9,6 +9,8 @@ public class addScore : MonoBehaviour
     public int score = 0;
     private showRadius GamecameraScript;
 
+    public GameObject TaskBook;
+
     public GameObject Dot;
 
     private void Start()
@@ -25,6 +27,8 @@ public class addScore : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Dot.SetActive(true);
+            TaskBook.SetActive(true);
+
         }
     }
     private void OnTriggerEnter(Collider other)

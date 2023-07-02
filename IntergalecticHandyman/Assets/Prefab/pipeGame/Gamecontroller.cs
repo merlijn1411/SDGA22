@@ -18,6 +18,8 @@ public class Gamecontroller : MonoBehaviour
 
     public GameObject Dot;
 
+    public GameObject TaskBook;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,7 @@ public class Gamecontroller : MonoBehaviour
             Cursor.visible = false;
             Dot.SetActive(true);
             WinPipeGame = true;
+            TaskBook.SetActive(true);
         }
     }
     public int GetCorrectedPipes()

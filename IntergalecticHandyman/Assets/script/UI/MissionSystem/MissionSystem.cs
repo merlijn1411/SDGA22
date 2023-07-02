@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using System;
+using UnityEditor.Experimental.GraphView;
 
 public class MissionSystem : MonoBehaviour
 {
@@ -13,22 +14,25 @@ public class MissionSystem : MonoBehaviour
     public int requiredCorrectedPipes;
     public int requiredScore;
 
-
-    
-
-    public Text game1StatusText; 
-    public Text game2StatusText; 
+    public GameObject Taskbook;
+    public GameObject Checkmark1;
+    public GameObject Checkmark2;   
 
     private bool game1Complete = false;
     private bool game2Complete = false;
 
+    bool hide = false;
+
+
+    private void Start()
+    {
+        Checkmark1.SetActive(false);
+        Checkmark2.SetActive(false);
+    }
     private void Update()
     {
         if (!game1Complete && gameController.GetCorrectedPipes() >= requiredCorrectedPipes) // is gelinkt aan de pipe GameController script
         {
-            // Mission condition met
-            game1Complete = true;
-            Debug.Log("Game 1 completed!");
             CompleteGame1();
         }
 
@@ -36,19 +40,30 @@ public class MissionSystem : MonoBehaviour
         {
             CompleteGame2();
         }
+
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            hide = !hide;
+            if(hide)
+            {
+                Taskbook.SetActive(false);
+            }
+            else Taskbook.SetActive(true);
+        }
+        
     }
 
     private void CompleteGame1()
     {
         game1Complete = true;
         Debug.Log("Game 1 completed!");
-        game1StatusText.text = "Game 1 Complete";
+        Checkmark1.SetActive(true);
     }
 
     private void CompleteGame2()
     {
         game2Complete = true;
         Debug.Log("Game 2 completed!");
-        game2StatusText.text = "Game 2 Complete";
+        Checkmark2.SetActive(true);
     }
 }
