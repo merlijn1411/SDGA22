@@ -48,6 +48,10 @@ public class Gamecontroller : MonoBehaviour
             WinPipeGame = true;
         }
     }
+    public int GetCorrectedPipes()
+    {
+        return correctedPipes; //voor de MissionSystem script
+    }
 
     public void wrongMove()
     {
