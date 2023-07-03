@@ -15,16 +15,6 @@ public class GameplaySettings : MonoBehaviour
 
     //toggle Settings
     [SerializeField] private Toggle invertYToggle = null;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SetControllorSen(float sensitiviyy)
     {

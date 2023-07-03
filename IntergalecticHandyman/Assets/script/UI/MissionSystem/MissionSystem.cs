@@ -6,6 +6,7 @@ using TMPro;
 using System;
 using UnityEditor.Experimental.GraphView;
 using System.Threading;
+using static UnityEngine.Timeline.AnimationPlayableAsset;
 
 public class MissionSystem : MonoBehaviour
 {
@@ -44,6 +45,9 @@ public class MissionSystem : MonoBehaviour
 
         winScreen.SetActive(false);
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         foreach (HoldInteraction interaction in holdInteractions)
         {
             interaction.OnInteractionComplete += HandleInteractionComplete;
@@ -63,8 +67,8 @@ public class MissionSystem : MonoBehaviour
 
         if (game1Complete && game2Complete && isMissionComplete)
         {
-            ShowWinScreen();
             Taskbook.SetActive(false);
+            ShowWinScreen();
         }
 
         if (Input.GetKey(KeyCode.Tab))
@@ -116,13 +120,14 @@ public class MissionSystem : MonoBehaviour
     }
     private void UpdateProgressText()
     {
-        progressText.text = $"{completedInteractions}/{requiredInteractions}";
+        progressText.text = $"{completedInteractions}/{requiredInteractions}"; //dit is voor de HoldInteraction script text
     }
     private void ShowWinScreen()
     {
-        Time.timeScale = 1f;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0f;
         winScreen.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
