@@ -9,19 +9,28 @@ using UnityEngine.Audio;
 public class HoldInteraction : MonoBehaviour
 {
     public float interactionRadius = 3f;
+
     public Transform playerTransform;
+
     public TextMeshProUGUI interactionText;
+
     public Image progressBar;
+
     public float progressBarWidth = 1000; // Set the desired width of the progress bar
+
     public Image BackgroundProgressBar;
+
     public AudioSource Audio;
 
 
     private bool isInRange = false;
     private bool isHoldingInteraction = false;
     private bool isInteractionComplete = false;
+
     private float interactionHoldTime = 0f;
     private const float requiredHoldTime = 10f;
+
+    public event System.Action OnInteractionComplete;
 
     private void Start()
     {
@@ -120,6 +129,7 @@ public class HoldInteraction : MonoBehaviour
     private void CompleteInteraction()
     {
         isInteractionComplete = true;
+        OnInteractionComplete?.Invoke();
         Debug.Log("Interaction complete!");
     }
 }
