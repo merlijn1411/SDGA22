@@ -81,7 +81,12 @@ public class MissionSystem : MonoBehaviour
             }
             else 
             {
-                Taskbook.SetActive(true); Thread.Sleep(100); 
+                if (!hide)
+                {
+                    Taskbook.SetActive(true); 
+                    Thread.Sleep(100);
+                }
+                 
             }
         }
 

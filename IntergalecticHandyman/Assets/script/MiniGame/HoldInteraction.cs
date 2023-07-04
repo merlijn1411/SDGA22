@@ -22,6 +22,8 @@ public class HoldInteraction : MonoBehaviour
 
     public AudioSource Audio;
 
+    public  GameObject cam1;
+
 
     private bool isInRange = false;
     private bool isHoldingInteraction = false;
@@ -92,15 +94,14 @@ public class HoldInteraction : MonoBehaviour
                 // Player released 'E'
                 isHoldingInteraction = false;
                 interactionHoldTime = 0f;
+                Audio.Stop();
             }
             if (isInRange)
             {
                 // Text is facing the player
-                
-                Vector3 directionToPlayer = playerTransform.position + transform.position;
-                Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
-                interactionText.transform.rotation = lookRotation;
-                
+                            
+                transform.LookAt(cam1.transform);
+                transform.Rotate(0, 180, 0);
             }
             
 
