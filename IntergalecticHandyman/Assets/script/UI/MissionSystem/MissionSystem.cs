@@ -44,8 +44,7 @@ public class MissionSystem : MonoBehaviour
 
         winScreen.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        InVisibleCursor();
 
         foreach (HoldInteraction interaction in holdInteractions)
         {
@@ -131,7 +130,16 @@ public class MissionSystem : MonoBehaviour
         Time.timeScale = 0f;
         winScreen.SetActive(true);
 
+        VisibleCursor();
+    }
+    public void VisibleCursor()
+    {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+    public void InVisibleCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

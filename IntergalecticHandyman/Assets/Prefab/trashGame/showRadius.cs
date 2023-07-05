@@ -41,8 +41,7 @@ public class showRadius : MonoBehaviour
                 cam2.SetActive(true);
                 Dot.SetActive(false);
                 TaskBook.SetActive(false);
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                VisibleCursor();
             }
         }
         if (distanceToTExt >= radius)
@@ -53,9 +52,11 @@ public class showRadius : MonoBehaviour
         
          transform.LookAt(cam1.transform);
          transform.Rotate(0, 180, 0);
-        
-        
-
-        
     }
+    public void VisibleCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    
 }

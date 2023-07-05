@@ -15,8 +15,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        VisibleCursor();
     }
 
     public void RetryGame()
@@ -39,5 +38,10 @@ public class GameOver : MonoBehaviour
     {
         Debug.Log("Quitting Game...");
         Application.Quit();
+    }
+    public void VisibleCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

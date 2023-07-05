@@ -44,8 +44,7 @@ public class Gamecontroller : MonoBehaviour
             Debug.Log("Je hebt Gewonnen");
             GamecameraScript.cam1.SetActive(true);
             GamecameraScript.cam2.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            InVisibleCursor();
             Dot.SetActive(true);
             WinPipeGame = true;
             TaskBook.SetActive(true);
@@ -61,5 +60,10 @@ public class Gamecontroller : MonoBehaviour
         correctedPipes-= 1;
         
     }
-   
+    public void InVisibleCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
 }

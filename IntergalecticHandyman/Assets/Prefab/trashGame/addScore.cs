@@ -24,8 +24,7 @@ public class addScore : MonoBehaviour
             Debug.Log("je hebt gewonnen");
             GamecameraScript.cam1.SetActive(true);
             GamecameraScript.cam2.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            InVisibleCursor();
             Dot.SetActive(true);
             TaskBook.SetActive(true);
 
@@ -41,5 +40,10 @@ public class addScore : MonoBehaviour
             
 
         }
+    }
+    public void InVisibleCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
