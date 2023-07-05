@@ -16,7 +16,9 @@ public class showRadius : MonoBehaviour
 
     public GameObject cam1;
     public GameObject cam2;
-    // Start is called before the first frame update
+
+    public GameObject TutorialScreen;
+    
     void Start()
     {
         E.enabled = false;
@@ -42,6 +44,8 @@ public class showRadius : MonoBehaviour
                 Dot.SetActive(false);
                 TaskBook.SetActive(false);
                 VisibleCursor();
+                TutorialScreen.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
         if (distanceToTExt >= radius)

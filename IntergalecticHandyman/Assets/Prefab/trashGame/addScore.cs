@@ -13,6 +13,8 @@ public class addScore : MonoBehaviour
 
     public GameObject Dot;
 
+    public GameObject TutorialScreen;
+
     private void Start()
     {
         GamecameraScript = transform.parent.Find("canvasGameKnop").GetComponent<showRadius>();
@@ -45,5 +47,10 @@ public class addScore : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+    public void StartButton()
+    {
+        TutorialScreen.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
