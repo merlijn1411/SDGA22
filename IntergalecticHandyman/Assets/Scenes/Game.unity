@@ -967,58 +967,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129084196}
   m_CullTransparentMesh: 1
---- !u!1 &131301324
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 131301325}
-  - component: {fileID: 131301326}
-  m_Layer: 0
-  m_Name: KeyBoardEmpty
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &131301325
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131301324}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1413798423275198975}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &131301326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131301324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61702f1c426f346439c5d1fc6c75eed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionRadius: 3
-  playerTransform: {fileID: 1892416149182065320}
-  interactionText: {fileID: 596031529}
-  progressBar: {fileID: 177844627}
-  progressBarWidth: 1000
-  BackgroundProgressBar: {fileID: 1340601139}
-  Audio: {fileID: 1058488893}
-  cam1: {fileID: 1892416149944639869}
 --- !u!108 &146365881
 Light:
   m_ObjectHideFlags: 0
@@ -6535,8 +6483,8 @@ MonoBehaviour:
   requiredCorrectedPipes: 8
   requiredScore: 5
   holdInteractions:
-  - {fileID: 131301326}
-  - {fileID: 1356417407}
+  - {fileID: 7628612816005204964}
+  - {fileID: 6394405378438955485}
   Taskbook: {fileID: 522290472}
   Checkmark1: {fileID: 402788768}
   Checkmark2: {fileID: 883249622}
@@ -6873,58 +6821,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340601137}
   m_CullTransparentMesh: 1
---- !u!1 &1356417405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1356417406}
-  - component: {fileID: 1356417407}
-  m_Layer: 0
-  m_Name: WireBoxEmpty
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1356417406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356417405}
-  m_LocalRotation: {x: 0.000000029802322, y: -0.000000021073419, z: 0.00000002107343, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6394405378438955484}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1356417407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356417405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61702f1c426f346439c5d1fc6c75eed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionRadius: 3
-  playerTransform: {fileID: 1892416149182065320}
-  interactionText: {fileID: 1249123800}
-  progressBar: {fileID: 177844627}
-  progressBarWidth: 1000
-  BackgroundProgressBar: {fileID: 1340601139}
-  Audio: {fileID: 827532352}
-  cam1: {fileID: 1892416149944639869}
 --- !u!1 &1363219225
 GameObject:
   m_ObjectHideFlags: 0
@@ -13367,6 +13263,7 @@ GameObject:
   - component: {fileID: 5598016332122937709}
   - component: {fileID: 5303542531520285921}
   - component: {fileID: 827532352}
+  - component: {fileID: 6394405378438955485}
   m_Layer: 0
   m_Name: wirebox
   m_TagString: Untagged
@@ -13788,8 +13685,7 @@ Transform:
   m_LocalPosition: {x: 4.732314, y: 0.283495, z: 26.016945}
   m_LocalScale: {x: 26.897982, y: 56.122196, z: 0.89689046}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 131301325}
+  m_Children: []
   m_Father: {fileID: 543450652917260826}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14004,6 +13900,7 @@ GameObject:
   - component: {fileID: 6088137780690996446}
   - component: {fileID: 7628612816005204963}
   - component: {fileID: 1058488893}
+  - component: {fileID: 7628612816005204964}
   m_Layer: 0
   m_Name: Keyboard
   m_TagString: Untagged
@@ -30875,11 +30772,29 @@ Transform:
   m_LocalPosition: {x: 1.1425579, y: 0.28673804, z: 4.2478266}
   m_LocalScale: {x: -0.95040995, y: -84.603294, z: -46.142776}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1356417406}
+  m_Children: []
   m_Father: {fileID: 9143764062220387504}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6394405378438955485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229710742949622193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61702f1c426f346439c5d1fc6c75eed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRadius: 3
+  playerTransform: {fileID: 1892416149182065320}
+  interactionText: {fileID: 1249123800}
+  progressBar: {fileID: 177844627}
+  progressBarWidth: 1000
+  BackgroundProgressBar: {fileID: 1340601139}
+  Audio: {fileID: 827532352}
 --- !u!1 &6398600307494660913
 GameObject:
   m_ObjectHideFlags: 0
@@ -34008,6 +33923,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7628612816005204964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498248655622671241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61702f1c426f346439c5d1fc6c75eed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRadius: 3
+  playerTransform: {fileID: 1892416149182065320}
+  interactionText: {fileID: 596031529}
+  progressBar: {fileID: 177844627}
+  progressBarWidth: 1000
+  BackgroundProgressBar: {fileID: 1340601139}
+  Audio: {fileID: 1058488893}
 --- !u!1 &7634407353489637649
 GameObject:
   m_ObjectHideFlags: 0

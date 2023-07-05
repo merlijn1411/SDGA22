@@ -22,7 +22,6 @@ public class HoldInteraction : MonoBehaviour
 
     public AudioSource Audio;
 
-    public  GameObject cam1;
 
 
     private bool isInRange = false;
@@ -100,8 +99,7 @@ public class HoldInteraction : MonoBehaviour
             {
                 // Text is facing the player
                             
-                transform.LookAt(cam1.transform);
-                transform.Rotate(0, 180, 0);
+                
             }
             
 
