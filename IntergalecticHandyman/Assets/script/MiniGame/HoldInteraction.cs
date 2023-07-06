@@ -87,12 +87,12 @@ public class HoldInteraction : MonoBehaviour
                 
             }
             
-
             else
             {
                 // Player released 'E'
                 isHoldingInteraction = false;
                 interactionHoldTime = 0f;
+                BackgroundProgressBar.gameObject.SetActive(false);
                 Audio.Stop();
             }
             if (isInRange)
