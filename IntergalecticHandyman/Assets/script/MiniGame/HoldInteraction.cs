@@ -22,6 +22,8 @@ public class HoldInteraction : MonoBehaviour
 
     public AudioSource Audio;
 
+    public GameObject SignWorking;
+
 
 
     private bool isInRange = false;
@@ -83,6 +85,7 @@ public class HoldInteraction : MonoBehaviour
                     // Interaction held for 10 seconds
                     CompleteInteraction();
                     Audio.Stop();
+                    SignWorking.SetActive(false);
                 }
                 
             }
