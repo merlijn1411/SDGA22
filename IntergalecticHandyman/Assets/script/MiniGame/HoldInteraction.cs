@@ -98,7 +98,7 @@ public class HoldInteraction : MonoBehaviour
             if (isInRange)
             {
                 // Text is facing the player
-                            
+                //doesn't work
                 
             }
             
