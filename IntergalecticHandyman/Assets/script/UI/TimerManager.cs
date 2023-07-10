@@ -21,10 +21,6 @@ public class TimerManager : MonoBehaviour
         timerText.gameObject.SetActive(true);
     }
 
-    private void Update()
-    {
-       
-    }
 
     private IEnumerator StartCountdown()
     {
@@ -56,5 +52,11 @@ public class TimerManager : MonoBehaviour
                 seconds--;
             }
         }
+    }
+    public void LoadGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Game");
+        Debug.Log("Loading menu...");
     }
 }
