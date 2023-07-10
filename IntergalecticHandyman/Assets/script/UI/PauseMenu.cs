@@ -8,15 +8,12 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameisPaused = false;
     public GameObject pauseMenuUI;
-    void Start() 
-    {
-        
-    }
 
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            InVisibleCursor();
             if (GameisPaused) 
             {
                 Resume();
