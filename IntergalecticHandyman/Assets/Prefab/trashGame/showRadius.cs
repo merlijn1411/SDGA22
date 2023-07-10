@@ -37,15 +37,15 @@ public class showRadius : MonoBehaviour
             E.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
+                Time.timeScale = 1f;
+                TutorialScreen.SetActive(true);
                 Debug.Log("je hebt E ingedrukt");
                 cam1.SetActive(false);
                 cam2.SetActive(true);
                 Dot.SetActive(false);
                 TaskBook.SetActive(false);
                 VisibleCursor();
-                TutorialScreen.SetActive(true);
-                Time.timeScale = 0f;
+                
             }
         }
         if (distanceToTExt >= radius)
@@ -61,6 +61,12 @@ public class showRadius : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        TutorialScreen.SetActive(false);
+    }
+    public void StartMiniGame()
+    {
+        VisibleCursor();
+        Time.timeScale = 1f;
     }
     
 }

@@ -5,12 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -24,6 +18,7 @@ public class GameOver : MonoBehaviour
         Debug.Log("Loading Game...");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Time.timeScale = 1f;
         print("Error Button doesn't work");
         
     }
