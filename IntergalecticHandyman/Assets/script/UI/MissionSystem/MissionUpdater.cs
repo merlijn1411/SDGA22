@@ -90,6 +90,7 @@ public class MissionUpdater : MonoBehaviour
 
     }
 
+    //deze twee functie zijn als je de minigames hebt gedaan dat je dan te zien krijgt in het taskboekje dat ze zijn gedaan 
     private void CompleteGame1()
     {
         game1Complete = true;
@@ -104,6 +105,7 @@ public class MissionUpdater : MonoBehaviour
         Checkmark2.SetActive(true);
     }
 
+    //als je de HandleInteraction hebt gecomplete krijg je te zien dat het is gelukt 
     private void HandleInteractionComplete()
     {
         if (isMissionComplete)
@@ -123,6 +125,8 @@ public class MissionUpdater : MonoBehaviour
     {
         progressText.text = $"{completedInteractions}/{requiredInteractions}"; //dit is voor de HoldInteraction script text
     }
+
+    //als je alle tasks hebt gedaan heb je het spel gewonnen en krijg je het win scherm 
     private void ShowWinScreen()
     {
         Time.timeScale = 0f;

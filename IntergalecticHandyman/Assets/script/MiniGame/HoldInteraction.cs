@@ -16,7 +16,7 @@ public class HoldInteraction : MonoBehaviour
 
     public Image progressBar;
 
-    public float progressBarWidth = 1000; // Set the desired width of the progress bar
+    public float progressBarWidth = 1000; 
 
     public Image BackgroundProgressBar;
 
@@ -89,7 +89,6 @@ public class HoldInteraction : MonoBehaviour
                 }
                 
             }
-            
             else
             {
                 // Player released 'E'
@@ -97,12 +96,6 @@ public class HoldInteraction : MonoBehaviour
                 interactionHoldTime = 0f;
                 BackgroundProgressBar.gameObject.SetActive(false);
                 Audio.Stop();
-            }
-            if (isInRange)
-            {
-                // Text is facing the player
-                //doesn't work
-                
             }
             
 
