@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TimerManager : MonoBehaviour
 {
-    private Gamecontroller gamecontroller;
+    private PipeGameController pipeGameController;
     public TMP_Text timerText;
     public int minutes = 2;
     public int seconds = 30;

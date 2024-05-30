@@ -10,16 +10,13 @@ public class pipeScript : MonoBehaviour
 
     int PossibleRots = 1;
 
-    Gamecontroller gameManager;
-
-    private void Awake()
-    {
-        gameManager = GameObject.Find("GameManager").GetComponent<Gamecontroller>();
-    }
+    private PipeGameController _pipeGameController;
+    
 
     private void Start()
     {
-
+        _pipeGameController = GetComponentInParent<PipeGameController>();
+        
         
         PossibleRots = correctRotation.Length;
         int rand = Random.Range(0, rotations.Length);
@@ -30,7 +27,7 @@ public class pipeScript : MonoBehaviour
             if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1])
             {
                 inPlace = true;
-                gameManager.correctMove();
+                _pipeGameController.CorrectMove();
             }
         }
         else
@@ -38,7 +35,7 @@ public class pipeScript : MonoBehaviour
             if (transform.eulerAngles.z == correctRotation[0] )
             { 
                 inPlace = true;
-                gameManager.correctMove();
+                _pipeGameController.CorrectMove();
             }
         }
         
@@ -54,12 +51,12 @@ public class pipeScript : MonoBehaviour
             if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && inPlace == false)
             {
                 inPlace = true;
-                gameManager.correctMove();
+                _pipeGameController.CorrectMove();
             }
             else if (inPlace == true)
             {
                 inPlace = false;
-                gameManager.wrongMove();
+                _pipeGameController.wrongMove();
             }
         }
         else
@@ -67,12 +64,12 @@ public class pipeScript : MonoBehaviour
             if (transform.eulerAngles.z == correctRotation[0]  && inPlace == false)
             {
                 inPlace = true;
-                gameManager.correctMove();
+                _pipeGameController.CorrectMove();
             }
             else if (inPlace == true)
             {
                 inPlace = false;
-                gameManager.wrongMove();
+                _pipeGameController.wrongMove();
             }
         }
        

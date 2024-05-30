@@ -5,7 +5,7 @@ using UnityEngine;
 public class TaskChecker : MonoBehaviour
 {
  
-    public Gamecontroller gameController;
+    public PipeGameController gameController;
     public addScore addScoreController;
 
     public int requiredCorrectedPipes;

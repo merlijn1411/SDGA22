@@ -23886,6 +23886,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!136 &3762479318735599214
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23950,6 +23951,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!136 &3762479318852187505
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24263,6 +24265,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!136 &3762479319345226956
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24430,11 +24433,8 @@ MonoBehaviour:
   - {fileID: 3762479320406826501}
   - {fileID: 3762479320279696324}
   - {fileID: 3762479320761462014}
-  totalpipes: 8
+  totalPipes: 0
   correctedPipes: 0
-  Dot: {fileID: 276123981}
-  TaskBook: {fileID: 522290472}
-  TutorialScreen: {fileID: 0}
 --- !u!1 &3762479319559905858
 GameObject:
   m_ObjectHideFlags: 0
@@ -25087,6 +25087,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!136 &3762479320266338115
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25151,6 +25152,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!136 &3762479320279696326
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25215,6 +25217,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!136 &3762479320406826503
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25254,6 +25257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3762479320514030962}
+  - component: {fileID: 3762479320514030963}
   m_Layer: 0
   m_Name: PIPE
   m_TagString: Untagged
@@ -25284,6 +25288,30 @@ Transform:
   m_Father: {fileID: 3762479320558476032}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3762479320514030963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762479320514030961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec42ecbcc921cf4093af7cf38e6c194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pipesHolder: {fileID: 3762479320514030961}
+  pipes:
+  - {fileID: 3762479319345226954}
+  - {fileID: 3762479318735599212}
+  - {fileID: 3762479320661853289}
+  - {fileID: 3762479320266338113}
+  - {fileID: 3762479318852187471}
+  - {fileID: 3762479320406826501}
+  - {fileID: 3762479320279696324}
+  - {fileID: 3762479320761462014}
+  totalPipes: 0
+  correctedPipes: 0
 --- !u!1 &3762479320543668080
 GameObject:
   m_ObjectHideFlags: 0
@@ -25417,6 +25445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaabf4dbdb5a1c49a0c5590077da138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameCamsChecker: {fileID: 1087678203}
 --- !u!23 &3762479320651713248
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25534,6 +25563,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!136 &3762479320661853291
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25628,6 +25658,7 @@ MonoBehaviour:
   - 0
   - 180
   inPlace: 0
+  gameManager: {fileID: 0}
 --- !u!1 &3762479320788512754
 GameObject:
   m_ObjectHideFlags: 0
@@ -31105,6 +31136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaabf4dbdb5a1c49a0c5590077da138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameCamsChecker: {fileID: 1087678203}
 --- !u!33 &4983692005553044236
 MeshFilter:
   m_ObjectHideFlags: 0
