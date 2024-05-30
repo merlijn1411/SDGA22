@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;  
 
 
@@ -15,17 +16,9 @@ public class InteractionRadius : MonoBehaviour
     // public GameObject cam2;
     
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject interactionText;
+    [SerializeField] private TextMeshPro interactionText;
     [SerializeField] private float radius;
     
-    
-    void Start()
-    {
-        // E.enabled = false;
-        //
-        // cam1.SetActive(true);
-        // cam2.SetActive(false);
-    }
     
     void Update()
     {
@@ -61,6 +54,7 @@ public class InteractionRadius : MonoBehaviour
     {
         var distanceToTarget = Vector3.Distance(interactionText.transform.position, player.position);
 
-        interactionText.SetActive(distanceToTarget <= radius);
+        var targetAlpha = distanceToTarget < radius ? 255 : 0;
+        interactionText.color = new Color(255, 255, 255, targetAlpha);
     }
 }
