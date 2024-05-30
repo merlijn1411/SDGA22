@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 public class GameCamsChecker : MonoBehaviour
 {
-    [SerializeField] private Camera mainCam;
-    [SerializeField] private Camera[] secCams;
+    public Camera mainCam;
+    public Camera[] secCams;
     private void Start()
     {
         DisableSecCams();

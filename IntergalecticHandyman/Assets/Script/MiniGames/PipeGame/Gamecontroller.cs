@@ -19,8 +19,7 @@ public class Gamecontroller : MonoBehaviour
     public GameObject Dot;
 
     public GameObject TaskBook;
-
-    public GameObject TutorialScreen;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -66,11 +65,6 @@ public class Gamecontroller : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-    }
-    public void StartButton()
-    {
-        TutorialScreen.SetActive(false);
-        Time.timeScale = 1f;
     }
 
 }
