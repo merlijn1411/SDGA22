@@ -12,7 +12,7 @@ public class Gamecontroller : MonoBehaviour
     [SerializeField]
     int correctedPipes = 0;
 
-    private showRadius GamecameraScript;
+    private InteractionRadius GamecameraScript;
 
     internal bool WinPipeGame = false;
 
@@ -25,7 +25,7 @@ public class Gamecontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GamecameraScript = transform.parent.Find("canvasGameKnop").GetComponent<showRadius>();
+        //GamecameraScript = transform.parent.Find("canvasGameKnop").GetComponent<InteractionRadius>();
         
         totalpipes= pipesHolder.transform.childCount;
 
@@ -44,8 +44,8 @@ public class Gamecontroller : MonoBehaviour
         if(correctedPipes == totalpipes)
         {
             Debug.Log("Je hebt Gewonnen");
-            GamecameraScript.cam1.SetActive(true);
-            GamecameraScript.cam2.SetActive(false);
+            // GamecameraScript.cam1.SetActive(true);
+            // GamecameraScript.cam2.SetActive(false);
             InVisibleCursor();
             Dot.SetActive(true);
             WinPipeGame = true;

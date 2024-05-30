@@ -7,7 +7,7 @@ using TMPro;
 public class addScore : MonoBehaviour
 {
     public int score = 0;
-    private showRadius GamecameraScript;
+    private InteractionRadius GamecameraScript;
 
     public GameObject TaskBook;
 
@@ -17,15 +17,15 @@ public class addScore : MonoBehaviour
 
     private void Start()
     {
-        GamecameraScript = transform.parent.Find("canvasGameKnop").GetComponent<showRadius>();
+        //GamecameraScript = transform.parent.Find("canvasGameKnop").GetComponent<InteractionRadius>();
     }
     private void Update()
     {
         if (score == 5)
         {
             Debug.Log("je hebt gewonnen");
-            GamecameraScript.cam1.SetActive(true);
-            GamecameraScript.cam2.SetActive(false);
+            // GamecameraScript.cam1.SetActive(true);
+            // GamecameraScript.cam2.SetActive(false);
             InVisibleCursor();
             Dot.SetActive(true);
             TaskBook.SetActive(true);

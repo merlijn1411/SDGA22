@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
 using TMPro;
 using UnityEngine;
 
-public class MissionUpdater : MonoBehaviour
+public class TaskChecker : MonoBehaviour
 {
  
     public Gamecontroller gameController;
