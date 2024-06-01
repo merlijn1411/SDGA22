@@ -17,7 +17,7 @@ public class StartTask : MonoBehaviour
         CursorOn();
     }
 
-    public void CursorOn()
+    private static void CursorOn()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

@@ -7,8 +7,7 @@ public class PipeGameController : MonoBehaviour
 
     private int totalPipes = 0;
     private int correctedPipes = 0;
-
-    internal bool WinPipeGame = false;
+    
     
     void Start()
     {
@@ -23,7 +22,7 @@ public class PipeGameController : MonoBehaviour
     private void InitializePipes()
     {
         var pl = pipes.Length;
-        for (int i = 0; i < pl; i++)
+        for (var i = 0; i < pl; i++)
         {
             pipes[i] = pipesHolder.transform.GetChild(i).gameObject;
         }
@@ -34,8 +33,8 @@ public class PipeGameController : MonoBehaviour
         correctedPipes += 1;
 
         if (correctedPipes != totalPipes) return;
+        
         Debug.Log("Je hebt Gewonnen");
-        WinPipeGame = true;
     }
     public int GetCorrectedPipes()
     { 

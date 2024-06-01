@@ -12,9 +12,9 @@ public class GameCamsChecker : MonoBehaviour
 
     private void DisableSecCams()
     {
-        for (int i = 0; i < secCams.Length; i++)
+        foreach (var t in secCams)
         {
-            secCams[i].enabled = false;
+            t.enabled = false;
         }
     }
 }

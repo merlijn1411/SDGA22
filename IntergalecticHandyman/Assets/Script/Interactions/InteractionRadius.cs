@@ -1,11 +1,10 @@
-using TMPro;
 using UnityEngine;  
 
 
 public class InteractionRadius : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private TextMeshPro interactionText;
+    [SerializeField] private GameObject[] interactionText;
     [SerializeField] private float radius;
     
     private void Update()
@@ -15,9 +14,13 @@ public class InteractionRadius : MonoBehaviour
 
     private void InRadius()
     {
-        var distanceToTarget = Vector3.Distance(interactionText.transform.position, player.position);
+        foreach (var Text in interactionText)
+        {
+            var distanceToTarget = Vector3.Distance(Text.transform.position, player.position);
 
-        var targetAlpha = distanceToTarget < radius ? 255 : 0;
-        interactionText.color = new Color(255, 255, 255, targetAlpha);
+            var inRange = distanceToTarget < radius ? true : false;
+            
+            Text.SetActive(inRange);
+        }
     }
 }
