@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DoInteraction : MonoBehaviour
+public class interactionStatus : MonoBehaviour
 {
     public UnityEvent startInteraction;
     private void Update()
@@ -13,6 +13,10 @@ public class DoInteraction : MonoBehaviour
     {
         if (!Input.GetKeyDown(KeyCode.E)) return;
         startInteraction.Invoke();
-        print("boem");
+    }
+
+    public void InteractionTaskDone()
+    {
+        Destroy(gameObject);
     }
 }

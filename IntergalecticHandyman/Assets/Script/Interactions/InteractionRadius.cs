@@ -1,11 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;  
 
 
 public class InteractionRadius : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject[] interactionText;
     [SerializeField] private float radius;
+    
+    [SerializeField] private List<GameObject> interactionText;
     
     private void Update()
     {
@@ -14,13 +16,20 @@ public class InteractionRadius : MonoBehaviour
 
     private void InRadius()
     {
-        foreach (var Text in interactionText)
+        foreach (var text in interactionText)
         {
-            var distanceToTarget = Vector3.Distance(Text.transform.position, player.position);
+            var distanceToTarget = Vector3.Distance(text.transform.position, player.position);
 
             var inRange = distanceToTarget < radius ? true : false;
             
-            Text.SetActive(inRange);
+            text.SetActive(inRange);
         }
+    }
+
+    public void RemoveFromList(string objectName)
+    {
+        GameObject objectToRemove = interactionText.Find(obj => obj.name == objectName);
+        
+        interactionText.Remove(objectToRemove);
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PipeGameController : MonoBehaviour
 {
@@ -7,13 +8,13 @@ public class PipeGameController : MonoBehaviour
 
     private int totalPipes = 0;
     private int correctedPipes = 0;
+
+    public UnityEvent onCompleteTask;
     
     
     void Start()
     {
-        
         totalPipes = pipesHolder.transform.childCount;
-
         pipes = new GameObject[totalPipes];
 
         InitializePipes();
@@ -33,8 +34,7 @@ public class PipeGameController : MonoBehaviour
         correctedPipes += 1;
 
         if (correctedPipes != totalPipes) return;
-        
-        Debug.Log("Je hebt Gewonnen");
+            onCompleteTask.Invoke();
     }
     public int GetCorrectedPipes()
     { 
