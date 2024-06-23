@@ -1,62 +1,38 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class TimerManager : MonoBehaviour
 {
-    private PipeGameController pipeGameController;
-    public TMP_Text timerText;
-    public int minutes = 2;
-    public int seconds = 30;
-    public GameObject GameoverScreen;
-
+    [SerializeField] private int minutes;
+    [SerializeField] private int seconds;
+    [SerializeField] private TMP_Text timerText;
+    private TimeSpan _timeLeft;
+    
 
     private void Start()
     {
+        _timeLeft = new TimeSpan(0, minutes, seconds);
+        timerText.text = _timeLeft.ToString(@"mm\:ss");
         StartCoroutine(StartCountdown()); 
-        GameoverScreen.gameObject.SetActive(false);
-        timerText.gameObject.SetActive(true);
     }
-
-
+    
     private IEnumerator StartCountdown()
     {
-        while (minutes >= 0 && seconds >= 0)
+        while (true)
         {
-            timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-
+            timerText.text = _timeLeft.ToString(@"mm\:ss");
+            _timeLeft = _timeLeft.Subtract(new TimeSpan(0, 0, 1));
+            
             yield return new WaitForSeconds(1);
 
-            if (seconds == 0)
+            if (_timeLeft < TimeSpan.Zero)
             {
-                if (minutes == 0)
-                {
-                    // Countdown has finished
-                    Debug.Log("Game over ");
-                    GameoverScreen.gameObject.SetActive(true);
-                    timerText.gameObject.SetActive(false);
-                    Time.timeScale = 0f;
-                    break;
-                }
-                else
-                {
-                    minutes--;
-                    seconds = 59;
-                }
-            }
-            else
-            {
-                seconds--;
+                timerText.gameObject.SetActive(false);
+                break;
             }
         }
-    }
-    public void LoadGame()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Game");
-        Debug.Log("Loading menu...");
     }
 }
