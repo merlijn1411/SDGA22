@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class PipeGameController : MonoBehaviour
 {
     [SerializeField] private GameObject pipesHolder;
-    [SerializeField] private GameObject[] pipes;
+    private GameObject[] pipes;
 
     private int totalPipes = 0;
     private int correctedPipes = 0;
@@ -12,7 +12,7 @@ public class PipeGameController : MonoBehaviour
     public UnityEvent onCompleteTask;
     
     
-    void Start()
+    private void Start()
     {
         totalPipes = pipesHolder.transform.childCount;
         pipes = new GameObject[totalPipes];
@@ -35,10 +35,6 @@ public class PipeGameController : MonoBehaviour
 
         if (correctedPipes != totalPipes) return;
             onCompleteTask.Invoke();
-    }
-    public int GetCorrectedPipes()
-    { 
-        return correctedPipes; 
     }
 
     public void wrongMove()

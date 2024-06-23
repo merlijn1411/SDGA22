@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class TaskChecker : MonoBehaviour
@@ -36,6 +35,11 @@ public class TaskChecker : MonoBehaviour
         gameCamsChecker.mainCam.enabled = true;
         gameCamsChecker.secCams[1].enabled = false;
         CursorOff();
+    }
+
+    public void SimpleTask()
+    {
+        
     }
 
     private static void CursorOn()

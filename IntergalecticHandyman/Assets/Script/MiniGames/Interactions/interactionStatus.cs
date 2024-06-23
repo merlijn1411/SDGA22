@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class interactionStatus : MonoBehaviour
 {
     public UnityEvent startInteraction;
+    public UnityEvent cancelInteraction;
     private void Update()
     {
         StartInteraction();
@@ -11,8 +12,11 @@ public class interactionStatus : MonoBehaviour
 
     private void StartInteraction()
     {
-        if (!Input.GetKeyDown(KeyCode.E)) return;
-        startInteraction.Invoke();
+        if (Input.GetKeyDown(KeyCode.E)) 
+            startInteraction.Invoke();
+        else if (Input.GetKeyUp(KeyCode.E))
+            cancelInteraction.Invoke();
+        
     }
 
     public void InteractionTaskDone()

@@ -28,7 +28,7 @@ public class InteractionRadius : MonoBehaviour
 
     public void RemoveFromList(string objectName)
     {
-        GameObject objectToRemove = interactionText.Find(obj => obj.name == objectName);
+        var objectToRemove = interactionText.Find(obj => obj.name == objectName);
         
         interactionText.Remove(objectToRemove);
     }
