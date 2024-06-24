@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class TimerManager : MonoBehaviour
 {
@@ -10,6 +10,8 @@ public class TimerManager : MonoBehaviour
     [SerializeField] private int seconds;
     [SerializeField] private TMP_Text timerText;
     private TimeSpan _timeLeft;
+
+    public UnityEvent onTimeZero;
     
 
     private void Start()
@@ -31,6 +33,7 @@ public class TimerManager : MonoBehaviour
             if (_timeLeft < TimeSpan.Zero)
             {
                 timerText.gameObject.SetActive(false);
+                onTimeZero.Invoke();
                 break;
             }
         }

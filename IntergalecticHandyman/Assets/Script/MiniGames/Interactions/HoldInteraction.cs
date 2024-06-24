@@ -13,7 +13,7 @@ public class HoldInteraction : MonoBehaviour
     [SerializeField] private float chargeSpeed;
     [SerializeField] private AudioSource interactionSounds;
 
-    private bool _isCharging = false;
+    private bool _isFilling = false;
     private float _chargeValue = 0f;
 
     public UnityEvent taskComplete;
@@ -21,7 +21,7 @@ public class HoldInteraction : MonoBehaviour
 
     public void Interaction_started()
     {
-        _isCharging = true; 
+        _isFilling = true; 
         interactionSounds.Play();
         progressBar.gameObject.SetActive(true);
     }
@@ -29,12 +29,12 @@ public class HoldInteraction : MonoBehaviour
     public void Interaction_canceled()
     {
         interactionSounds.Stop();
-        _isCharging = false; 
+        _isFilling = false; 
     }
     
     private void Update()
     {
-        if(_isCharging)
+        if(_isFilling)
         {
             Fill();
         }
