@@ -1,17 +1,9 @@
 # SDGA22
-A Space Game 
----
-Members:
-- Davey 
-- Elliot
-- Tijn
-- Andreas
-- Gui
-- Sill
-- Merlijn
----
-- Settings moeten op Fullscreen!
----
-Tips om te Pushen:
-- pull eerst voor dat je iets aanpast aan de files.
-- 
+## Members:
+- [Davey](https://github.com/daveyvandijk) 
+- [Elliot](https://github.com/Rainbowtoons)
+- [Tijn](https://github.com/Tijn075)
+- [Andreas](https://github.com/adnreas)
+- [Gui](https://github.com/Guuiiiii)
+- [Sill](https://github.com/InferiorScout)
+- [Merlijn](https://github.com/merlijn1411)
