@@ -4,38 +4,24 @@ using UnityEngine.SceneManagement;
 
 public class PrestigeStatus : MonoBehaviour
 {
-    [SerializeField] private TMP_Text Text;
-    
+    [SerializeField] private TMP_Text text;
+
     public void Win()
     {
-        Text.text = $"You Win!";
-        VisibleCursor();
+        text.text = $"You Win!";
     }
     public void Loose()
     {
-        Text.text = $"You Losed!";
-        VisibleCursor();
+        text.text = $"You Losed!";
     }
-    public void RetryGame()
+    public void LoadGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        InVisibleCursor();
-        Time.timeScale = 1f;
+        SceneManager.LoadScene("Game");
     }
     public void LoadMenu()
     {
         SceneManager.LoadScene("Menu");
-        VisibleCursor();
     }
     
-    private void VisibleCursor()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-    private void InVisibleCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    
 }

@@ -20,11 +20,6 @@ public class TimerManager : MonoBehaviour
         timerText.text = _timeLeft.ToString(@"mm\:ss");
         StartCoroutine(StartCountdown()); 
     }
-
-    public void StopCountDown()
-    {
-        StopCoroutine(StartCountdown());
-    }
     
     private IEnumerator StartCountdown()
     {

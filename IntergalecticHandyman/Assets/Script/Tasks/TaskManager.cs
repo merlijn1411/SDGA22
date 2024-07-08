@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using Cursor = UnityEngine.Cursor;
 
 public class TaskManager : MonoBehaviour
 {
@@ -38,51 +36,47 @@ public class TaskManager : MonoBehaviour
 
     public void StartTrashTask()
     {
-        gameCamsChecker.mainCam.enabled = false;
-        gameCamsChecker.secCams[0].enabled = true;
-        CursorOn();
+        CamToggler(0, true);
     }
 
     public void TrashTaskDone()
     {
-        gameCamsChecker.mainCam.enabled = true;
-        gameCamsChecker.secCams[0].enabled = false;
+        CamToggler(0, false);
         _trashGameCompleted = true;
-        CursorOff();
-        trashToggle.isOn = true;
+        trashToggle.isOn = _trashGameCompleted;
     }
 
     public void StartPipelineTask()
     {
-        gameCamsChecker.mainCam.enabled = false;
-        gameCamsChecker.secCams[1].enabled = true;
-        CursorOn();
+        CamToggler(1, true);
     }
 
     public void PipelineTaskDone()
     {
-        gameCamsChecker.mainCam.enabled = true;
-        gameCamsChecker.secCams[1].enabled = false;
+        CamToggler(1, false);
         _pipeGameCompleted = true;
-        CursorOff();
-        pipeToggle.isOn = true;
+        pipeToggle.isOn = _pipeGameCompleted;
     }
-
-    public void CompleteHoldTask()
+    private void CamToggler(int camList, bool isTaskStarting)
+    {
+        switch (isTaskStarting)
+        {
+            case true:
+                gameCamsChecker.mainCam.enabled = false;
+                gameCamsChecker.secCams[camList].enabled = true;
+                break;
+            case false:
+                gameCamsChecker.mainCam.enabled = true;
+                gameCamsChecker.secCams[camList].enabled = false;
+                break;
+        } 
+    }
+    
+    public void HoldTaskUpdater()
     {
         completeHoldTasks++;
-        
         taskText.text = $"{completeHoldTasks}/{tasks.Count}";
     }
 
-    private static void CursorOn()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-    private static void CursorOff()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    
 }

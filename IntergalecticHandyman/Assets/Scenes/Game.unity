@@ -312,6 +312,7 @@ RectTransform:
   m_Children:
   - {fileID: 522290473}
   - {fileID: 1072088609}
+  - {fileID: 306579714}
   m_Father: {fileID: 802342330}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1059,7 +1060,7 @@ GameObject:
   - component: {fileID: 299636173}
   - component: {fileID: 299636172}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PrestigeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,8 +1083,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.603466, y: 5.1428585}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 6.4, y: -2.4}
+  m_SizeDelta: {x: 218.57208, y: 68.57212}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299636172
 MonoBehaviour:
@@ -1105,7 +1106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win!!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1168,7 +1169,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -7.566429, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1274,7 +1275,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1903250081}
-  m_Father: {fileID: 802342330}
+  m_Father: {fileID: 40120611}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -1300,18 +1301,6 @@ MonoBehaviour:
   onTimeZero:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507344231}
-        m_TargetAssemblyTypeName: PrestigeStatus, Assembly-CSharp
-        m_MethodName: Loose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 507344226}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1336,6 +1325,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 507344231}
+        m_TargetAssemblyTypeName: PrestigeStatus, Assembly-CSharp
+        m_MethodName: Loose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &308405564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &308405565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,7 +1476,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308405564}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1471,8 +1484,8 @@ RectTransform:
   - {fileID: 2137398831}
   - {fileID: 1469542064}
   - {fileID: 2043399937}
-  m_Father: {fileID: 1820059693}
-  m_RootOrder: 0
+  m_Father: {fileID: 802342330}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1992,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b817ad582d35f541b375da434d6bc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 299636172}
+  text: {fileID: 299636172}
 --- !u!1 &519996858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,7 +2528,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1087678205}
         m_TargetAssemblyTypeName: TaskChecker, Assembly-CSharp
-        m_MethodName: CompleteHoldTask
+        m_MethodName: HoldTaskUpdater
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2948,6 +2961,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   cancelInteraction:
     m_PersistentCalls:
       m_Calls: []
@@ -3109,8 +3134,7 @@ RectTransform:
   m_Children:
   - {fileID: 507344230}
   - {fileID: 40120611}
-  - {fileID: 306579714}
-  - {fileID: 1820059693}
+  - {fileID: 308405570}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3652,7 +3676,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 507344231}
         m_TargetAssemblyTypeName: PrestigeStatus, Assembly-CSharp
-        m_MethodName: RetryGame
+        m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3941,6 +3965,8 @@ GameObject:
   - component: {fileID: 1087678204}
   - component: {fileID: 1087678203}
   - component: {fileID: 1087678205}
+  - component: {fileID: 1087678206}
+  - component: {fileID: 1087678207}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4000,18 +4026,6 @@ MonoBehaviour:
   onAllTasksCompleted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507344231}
-        m_TargetAssemblyTypeName: PrestigeStatus, Assembly-CSharp
-        m_MethodName: Win
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 507344226}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -4024,9 +4038,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 306579715}
-        m_TargetAssemblyTypeName: TimerManager, Assembly-CSharp
-        m_MethodName: StopCountDown
+      - m_Target: {fileID: 40120607}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 507344231}
+        m_TargetAssemblyTypeName: PrestigeStatus, Assembly-CSharp
+        m_MethodName: Win
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4036,7 +4062,86 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 40120607}
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1087678206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087678202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fa41527ae26084698a12470997176b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1087678207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087678202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215dd58300706fb419a7be5d80a5b4a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGamePaused: 0
+  onPaused:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 308405564}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onPlay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 308405564}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4880,7 +4985,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1087678205}
         m_TargetAssemblyTypeName: TaskChecker, Assembly-CSharp
-        m_MethodName: CompleteHoldTask
+        m_MethodName: HoldTaskUpdater
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5833,8 +5938,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1820059694}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1087678207}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -6310,6 +6415,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   cancelInteraction:
     m_PersistentCalls:
       m_Calls: []
@@ -6595,130 +6712,6 @@ Transform:
   m_Father: {fileID: 394616830}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1820059687
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1820059693}
-  - component: {fileID: 1820059692}
-  - component: {fileID: 1820059691}
-  - component: {fileID: 1820059690}
-  - component: {fileID: 1820059689}
-  - component: {fileID: 1820059694}
-  m_Layer: 5
-  m_Name: PauseSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!222 &1820059689
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820059687}
-  m_CullTransparentMesh: 1
---- !u!114 &1820059690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820059687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1820059691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820059687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1820059692
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820059687}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1820059693
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820059687}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 308405570}
-  m_Father: {fileID: 802342330}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 540}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1820059694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820059687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215dd58300706fb419a7be5d80a5b4a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 308405564}
 --- !u!1 &1821903710
 GameObject:
   m_ObjectHideFlags: 0
@@ -7179,8 +7172,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1820059694}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1087678207}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
@@ -13594,7 +13587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069904013840220608}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -9.0112, y: -0.0000008169466, z: 0.0119}
+  m_LocalPosition: {x: -9.0112, y: 0, z: 0.05}
   m_LocalScale: {x: 259.18094, y: 260.34726, z: 259.18094}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14785,6 +14778,7 @@ GameObject:
   - component: {fileID: 1892416149182065320}
   - component: {fileID: 1892416149182065328}
   - component: {fileID: 1892416149182065329}
+  - component: {fileID: 1892416149182065330}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -14830,6 +14824,19 @@ MonoBehaviour:
   sensitivity: 15
   moveDirection: {x: 0, y: 0, z: 0}
   canMove: 1
+--- !u!114 &1892416149182065330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892416149182065324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7605a0114e4c18a4489a0aab6d65605f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskBook: {fileID: 522290472}
 --- !u!4 &1892416149944639864
 Transform:
   m_ObjectHideFlags: 0
@@ -23944,6 +23951,18 @@ MonoBehaviour:
           m_StringArgument: InteractionPoint(Pipeline)
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3762479320543668080
 GameObject:
   m_ObjectHideFlags: 0
@@ -29610,6 +29629,18 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: InteractionPoint(Trash)
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1087678206}
+        m_TargetAssemblyTypeName: CursorActivator, Assembly-CSharp
+        m_MethodName: CallCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!20 &4983692004444783601
