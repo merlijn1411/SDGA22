@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class PauseManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [SerializeField] private bool isGamePaused = false;
     public UnityEvent onPaused;
@@ -41,6 +41,11 @@ public class PauseManager : MonoBehaviour
         onPaused.Invoke();
         Time.timeScale = 0f;
     }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("Game");
+    }
     
     public void LoadMenu()
     {
@@ -50,7 +55,6 @@ public class PauseManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quitting Game...");
         Application.Quit();
     }
 }
