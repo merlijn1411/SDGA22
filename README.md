@@ -1,6 +1,6 @@
 # SDGA22
 
-To find the rules and the Description of this Project clikc [Here](https://github.com/merlijn1411/SDGA22/wiki)
+To find the rules and the Description of this Project click [Here](https://github.com/merlijn1411/SDGA22/wiki)
 ## Members:
 - [Davey](https://github.com/daveyvandijk) 
 - [Elliot](https://github.com/Rainbowtoons)
