@@ -33,8 +33,7 @@ public class PlayerMovementController : MonoBehaviour
 		#region Handles Movement
 		Vector3 forward = transform.TransformDirection(Vector3.forward);
 		Vector3 right = transform.TransformDirection(Vector3.right);
-
-		//To Run with Left-Shift
+		
 
 		bool isRunning = Input.GetKey(KeyCode.LeftShift);
 
