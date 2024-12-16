@@ -1,2 +1,9 @@
 # SDGA22
-a space game 
+## Members:
+- [Davey](https://github.com/daveyvandijk) 
+- [Elliot](https://github.com/Rainbowtoons)
+- [Tijn](https://github.com/Tijn075)
+- [Andreas](https://github.com/adnreas)
+- [Gui](https://github.com/Guuiiiii)
+- [Sill](https://github.com/InferiorScout)
+- [Merlijn](https://github.com/merlijn1411)
